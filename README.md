@@ -1,0 +1,1 @@
+# spring-select-parent-entity-by-child-properties
