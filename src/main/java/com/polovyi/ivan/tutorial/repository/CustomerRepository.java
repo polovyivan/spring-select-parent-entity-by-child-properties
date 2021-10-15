@@ -14,5 +14,5 @@ public interface CustomerRepository extends JpaRepository<CustomerEntity, String
             + "customer.purchaseTransactions purchaseTransaction "
             + "WHERE "
             + "purchaseTransaction.paymentType = :paymentType")
-    List<CustomerEntity> getAllCustomersByPaymentType(String paymentType);
+    List<CustomerEntity> findCustomersByPaymentType(String paymentType);
 }

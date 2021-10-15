@@ -19,6 +19,6 @@ public record CustomerService(CustomerRepository customerRepository) {
 
     public List<CustomerResponse> getAllCustomersByPaymentType(String paymentType) {
         log.info("Getting all customers by payment type {} ...", paymentType);
-        return customerRepository.getAllCustomersByPaymentType(paymentType).stream().map(CustomerResponse::valueOf).collect(Collectors.toList());
+        return customerRepository.findCustomersByPaymentType(paymentType).stream().map(CustomerResponse::valueOf).collect(Collectors.toList());
     }
 }
